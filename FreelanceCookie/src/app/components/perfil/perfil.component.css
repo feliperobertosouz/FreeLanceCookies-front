@@ -61,39 +61,6 @@ a, a:hover, a:visited, a:active {
 
 
 
-.action-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-button {
-    border-radius: 24px;
-    padding: 5px 6px 5px 6px;
-    border: 1px solid #FFFFFF;
-}
-
-.register-button {
-    color: #FFFFFF;
-    background-color: #FF7F39;
-    margin-right: 10px;
-}
-
-.login-button {
-    color: #FF7F39;
-}
-
-
-.below-navbar {
-    background-color: #FF7F39;
-    border-radius: 8px;
-    padding: 15px;
-    font-family: "Poppins";
-    color: #FFFFFF;
-    font-weight: 700;
-}
-
-.below-navbar p {
-    margin-top: 0px;
-    font-size: 1.3em;
+.login-icon a {
+    color: #FFF;
 }

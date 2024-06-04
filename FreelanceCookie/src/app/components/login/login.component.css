@@ -105,9 +105,7 @@ header {
     color: #FF7F39;
 }
 .footer-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0; /* Espaçamento interno para o conteúdo */
-  }
+  width: 100%;
+  text-align: center;
+  padding: 20px 0; /* Espaçamento interno para o conteúdo */
+}
