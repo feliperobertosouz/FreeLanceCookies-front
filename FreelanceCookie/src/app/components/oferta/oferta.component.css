@@ -1,85 +1,113 @@
-.orange-rectangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa toda a largura do container */
-    height: 90px; /* Altura desejada */
-    background-color: #FF7F39;
-    z-index: -1; /* Para garantir que fique atrás do conteúdo :)*/
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    font-size: 20px;
 }
 
-body {
-    font-family: 'Saira Stencil One', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
+@media (max-width: 800px) {
+    html, body {
+        font-size: 10px;
+    }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+    .action-buttons button {
+        font-size: 0.8em;
+    }
+
+    .action-buttons button.register-button {
+        margin-right: 2px;
+    }
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
 }
 
-.logo h1 {
+a, a:hover, a:visited, a:active {
+    text-decoration: none !important;
+    color: #000
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5% 5% 5% 5%;
+}
+
+.orange-rectangle {
+    background-color: #FF7F39;
+    padding: 0.4% 2.6% 0.4% 2.6%;
+}
+
+.login-icon a {
+    color: #FFF;
+}
+
+.saira-stencil-one-regular {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     color: #FFFFFF;
-    font-family: 'Saira Stencil One', sans-serif;
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+
+
+
+
+
+
+.freelance-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    scroll-behavior: smooth;
+    margin: 3% 0% 3% 0%;
 }
 
-.orange-rectangle.below-navbar {
-    position: relative;
-    top: 100px; /* Ajuste conforme necessário */
-    background-color: #fcefe5;
-    padding: 20px;
-    text-align: center;
+.freelance-images div {
+    width: fit-content;
+}
+
+.freelance-images img {
+    max-width: 20%;
     border-radius: 10px;
 }
 
-.contrate-text {
+
+.accept-button {
+    position: fixed;
+    top: calc(100% - 60px);
+    left: calc(100% - 115px);
+    border-radius: 24px;
+    background-color: #FF7F39;
     color: #FFFFFF;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 10px; /* Espaçamento abaixo do texto */
+    border: 0;
+    font-family: "Poppins";
+    padding: 7px 15px 7px 15px;
+    font-size: 1em;
 }
 
-.services-text {
-    text-align: center; /* Centralizar o texto */
-    margin-top: 70px; /* Espaçamento superior */
+
+
+@media (max-width: 800px) {
+    .accept-button {
+        position: fixed;
+        top: calc(100% - 37px);
+        left: calc(100% - 72px);
+        border-radius: 24px;
+        background-color: #FF7F39;
+        color: #FFFFFF;
+        border: 0;
+        font-family: "Poppins";
+        padding: 5px 10px 5px 10px;
+    }
 }
 
-.services-text p {
-    font-weight: bold; /* Negrito */
-    font-size: 24px; /* Tamanho da fonte */
-    color: #333333; /* Cor do texto */
-    margin: 0; /* Remover margem padrão */
-}
 
-.btn-voltar {
-    background-color: #888; /* Cinza */
-    color: #fff; /* Cor do texto */
-    padding: 10px 20px; /* Espaçamento interno */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Borda arredondada */
-    cursor: pointer; /* Cursor de mão */
-    position: absolute; /* Posicionamento absoluto */
-    top: 100px; 
-    left: 5%; /* Centralizando horizontalmente */
-}
-  
-  .btn-voltar:hover {
-    background-color: #666; /* Cinza escuro quando passa o mouse */
-  }
-  
+

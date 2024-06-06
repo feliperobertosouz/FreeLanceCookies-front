@@ -42,5 +42,9 @@ export class LoginComponent {
       }
     );
     }
+    
+    goToRegistration() {
+      this.router.navigate(['/registration']); // Substitua '/registration' pela rota correta da sua página de registro
+    }
   }
 
