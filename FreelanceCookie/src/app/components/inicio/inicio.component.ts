@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { freelances } from '../../../freelances-example';
 import { FreelanceCardComponent } from "../freelance-card/freelance-card.component";
+import { Oferta } from '../../model/oferta';
+import { OfertasServiceService } from '../../services/ofertas-service.service';
 @Component({
   selector: 'app-inicio',
   standalone: true,
@@ -12,5 +14,11 @@ import { FreelanceCardComponent } from "../freelance-card/freelance-card.compone
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
-  freelances = [...freelances];
+
+  freelances: Oferta[] = [];
+  constructor(private ofertasService: OfertasServiceService){}
+
+  ngOnInit(): void {
+    this.ofertasService.getOfertas().subscribe(ofertas => this.freelances = ofertas);
+  }
 }

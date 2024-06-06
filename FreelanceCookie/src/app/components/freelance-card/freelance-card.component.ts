@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 
-import { Freelance } from '../../../freelances-example';
+import { Oferta } from '../../model/oferta';
 
 @Component({
   selector: 'app-freelance-card',
@@ -12,5 +12,5 @@ import { Freelance } from '../../../freelances-example';
   styleUrl: './freelance-card.component.css'
 })
 export class FreelanceCardComponent {
-  @Input() freelance: Freelance | undefined;
+  @Input() freelance: Oferta | undefined;
 }

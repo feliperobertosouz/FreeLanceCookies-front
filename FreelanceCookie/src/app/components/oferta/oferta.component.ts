@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Freelance, freelances } from '../../../freelances-example';
 import { FreelanceCardComponent } from "../freelance-card/freelance-card.component";
+import { Oferta } from '../../model/oferta';
+import { OfertasServiceService } from '../../services/ofertas-service.service';
 
 @Component({
     selector: 'app-oferta',
@@ -13,18 +15,21 @@ import { FreelanceCardComponent } from "../freelance-card/freelance-card.compone
     imports: [CommonModule, FreelanceCardComponent]
 })
 export class OfertaComponent implements OnInit {
-  freelance: Freelance | undefined;
+  freelance: Oferta | undefined;
 
-
-  constructor(private route: ActivatedRoute) { }
-
+  constructor(
+    private route: ActivatedRoute,
+    private ofertaService: OfertasServiceService
+  ) { }
 
   ngOnInit(): void {
-    // First get the product id from the current route.
+    // Primeiro obtenha o ID do produto da rota atual.
     const routeParams = this.route.snapshot.paramMap;
     const freelanceIdFromRoute = Number(routeParams.get('freelanceId'));
 
-    // Find the freelance that correspond with the id provided in route.
-    this.freelance = freelances.find(freelance => freelance.id === freelanceIdFromRoute);
+    // Encontre a oferta que corresponde ao ID fornecido na rota usando o serviço.
+    this.ofertaService.getOfertaById(freelanceIdFromRoute).subscribe(data => {
+      this.freelance = data;
+    });
   }
 }
